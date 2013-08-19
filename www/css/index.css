@@ -23,13 +23,13 @@ body {
 }
 
 .search {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    margin: 0px;
     padding: 0px;
     height: 2em;
+    z-index: 99;
 }
 
 #searchfield {
@@ -37,34 +37,121 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    margin: 0;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
     height: 100%;
     font-size: 100%;
+    width: 85%;
+    z-index: 100;
 }
 
-.searchicon {
+.iconcontainer {
+    background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%); /* W3C */
+    display: table;
+    vertical-align: middle;
+    text-align: center;
     position: absolute;
     top: 0;
-    bottom: 0;
+    width: 7.5%;
+    height: 100%;
+    border-bottom: 2px ridge;
+}
+
+.stariconcontainer {
+    left: 0;
+}
+
+.searchiconcontainer {
     right: 0;
-    margin: 0.1em;
+}
+
+.icon {
+    vertical-align: middle;
     font-size: 140%;
 }
 
-#clear {
+/*.staricon {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 140%;
+}*/
+
+/*.searchicon {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 140%;
+}*/
+
+.showicon {
+    display: table-cell;
+}
+
+.hideicon {
     display: none;
+}
+
+.stariconhide {
+    color: lightgrey;
+}
+
+.showrow {
+    display: block;
+}
+
+.hiderow {
+    display: none;
+}
+
+.row {
+    position: relative; /* Necessary to properly position the stars */
 }
 
 .row ul {
     list-style-type: none;
     margin-bottom: 3.5em;
-    padding-left: 1em;
+    padding-left: 3em;
     padding-right: 1em;
 }
 
 .row ul li {
     display: block;
     margin-bottom: 0.6em;
+}
+
+.showcontainer {
+    display: block;
+}
+
+.hidecontainer {
+    display: none;
+}
+
+.starcontainer {
+    position: absolute;
+    width: 3em;
+    height: 100%;
+    color: #8000A3;
+}
+
+.startable {
+    width: 100%;
+    height: 100%;
+    display: table;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.star {
+    vertical-align: middle;
+    font-size: 200%;
 }
 
 .chinese {

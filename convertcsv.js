@@ -31,6 +31,8 @@ csv()
 		
 		var props = [];
 
+		props.push('index: "' + index + '"');
+
 		if (row.chinese)
 			props.push('chinese: "' + escape(row.chinese) + '"');
 

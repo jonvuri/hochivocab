@@ -11,9 +11,16 @@
     <body>
         <div class="app">
             <div class="search">
+                <div class="stariconcontainer iconcontainer">
+                    <div class="stariconhide icon hideicon"><i class="icon-star-empty"></i></div>
+                    <div class="stariconshow icon showicon"><i class="icon-star-empty"></i></div>
+                    <div class="staricononly icon hideicon"><i class="icon-star"></i></div>
+                </div>
                 <input id="searchfield" name="searchfield" type="text" placeholder="Search">
-                <div class="searchicon" id="glass"><i class="icon-search"></i></div>
-                <div class="searchicon" id="clear"><i class="icon-remove-sign"></i></div>
+                <div class="searchiconcontainer iconcontainer">
+                    <div class="searchicon icon showicon"><i class="icon-search"></i></div>
+                    <div class="clearsearchicon icon hideicon"><i class="icon-remove-sign"></i></div>
+                </div>
             </div>
             <div class="content"></div>
         </div>
